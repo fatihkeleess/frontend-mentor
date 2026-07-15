@@ -15,7 +15,7 @@
 <body>
     <div class="page">
 
-        <aside class="sidebar">
+        <aside class="sidebar sidebar--close">
 
             <div class="sidebar__top">
 
@@ -308,8 +308,13 @@
     </div>
 
     <script>
+        const menuButton = document.querySelector(".responsive-navBar-button");
+        const closeButton = document.querySelector(".sidebar--close-btn");
+        const sideBar = document.querySelector(".sidebar");
+
         if (menuButton && sideBar) {
             menuButton.addEventListener("click", () => {
+                sideBar.classList.remove("sidebar--close");
                 sideBar.classList.add("sidebar--open");
             });
         }
@@ -317,6 +322,7 @@
         if (closeButton && sideBar) {
             closeButton.addEventListener("click", () => {
                 sideBar.classList.remove("sidebar--open");
+                sideBar.classList.add("sidebar--close");
             });
         }
     </script>
