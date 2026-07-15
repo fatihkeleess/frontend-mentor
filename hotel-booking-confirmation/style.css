@@ -1,0 +1,1271 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz@0,9..144;1,9..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap');
+
+
+/* ======================= 
+    RESET CSS.
+   ======================= */
+
+html {
+
+    min-height: 100%;
+    font-size: 62.5%;
+}
+
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+body {
+
+
+    zoom: 0.8;
+
+    background-color: hsl(30, 24%, 93%);
+
+    min-height: 100%;
+    margin: 0;
+
+    font-family: "fraunces";
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    color: rgb(0, 0, 0);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ======================= 
+    BASE CSS.
+   =======================  */
+
+img,
+picture,
+svg {
+
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    font: inherit;
+}
+
+
+
+a {
+
+    color: inherit;
+    text-decoration: none;
+
+}
+
+ul,
+ol {
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+/* ======================= 
+    LAYOUT CSS.
+   =======================  */
+
+
+/* SIDEBAR START IS HERE...*/
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+
+
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #0f0f0f;
+
+    border-right: 1px solid rgb(209, 209, 209);
+
+    transition: transform .3s ease;
+}
+
+
+.sidebar__logo {
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    padding: 2rem 2rem;
+
+}
+
+.sidebar--close-btn{
+    display: none;
+    border: 2px solid #d1cdcd;
+    border-radius: 0.8rem;
+    background-color: transparent;
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.sidebar__logo::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 90%;
+    height: 1px;
+
+    background-color: #d8d7d7;
+
+    transform: translateX(-50%);
+
+}
+
+
+.sidebar__logo-image {
+
+    width: 50%;
+}
+
+.sidebar__list {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-left: 2rem;
+}
+
+.sidebar__item {
+    padding: 1rem;
+}
+
+.sidebar__link {
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    font-size: 1.9rem;
+}
+
+
+
+.sidebar__nottification {
+    background-color: hsl(18, 62%, 47%);
+    color: #fff;
+    text-align: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1.2rem;
+
+    border-radius: 50%;
+    margin-left: auto;
+
+}
+
+.sidebar__item--active,
+.sidebar__item:hover {
+    background-color: rgb(255, 255, 255);
+
+    margin-right: 1rem;
+
+    border-radius: 1.3rem;
+
+    padding: 1rem;
+}
+
+.sidebar__item:active {
+
+    background-color: rgb(255, 255, 255);
+
+    margin-right: 1rem;
+    padding: 1rem;
+
+    border-radius: 1.3rem;
+
+    outline: 2px solid hsl(15, 74%, 41%);
+
+
+}
+
+
+
+.sidebar__image {
+    color: #0f0f0f;
+}
+
+/* SIDEBAR - WEATHERCARD START IS HERE */
+
+.weather-card {
+
+    position: relative;
+
+    background-color: hsl(44, 84%, 75%);
+    background-image: url('assets/images/icon-weather.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 35%;
+    background-position: 115% -50%;
+
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+    margin-inline: 1.2rem;
+
+    padding: 1.5rem;
+
+
+
+    border-radius: 1.3rem;
+
+}
+
+
+.weather-card__temperature {
+    font-size: 4rem;
+}
+
+
+.weather-card::after {
+
+    content: "";
+
+    position: absolute;
+
+
+    left: 50%;
+    bottom: 0;
+    margin: -2rem 0rem;
+
+    width: 95%;
+    height: 1px;
+
+    background-color: #d8d7d7;
+
+    transform: translateX(-50%);
+
+}
+
+
+/* SIDEBAR - FOOTER START IS HERE...*/
+
+.sidebar__footer {
+
+    margin: 3rem 0rem 2rem 2.3rem;
+
+    color: grey;
+
+    font-size: 1.2rem;
+
+
+
+}
+
+.sidebar__footer-text {
+
+    padding: 0.3rem;
+    letter-spacing: 0.2rem;
+
+}
+
+
+
+
+/* ======================= 
+    MAIN.
+   =======================  */
+
+
+/* HEDAER START IS HERE... */
+
+
+
+.main-header {
+
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+.main-header__content{
+     padding: 2rem 3rem;
+}
+
+
+.main-header__responsive-navBar {
+    position: relative;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+.main-header__responsive-navBar::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    
+    height:2px;
+    background:#d3d1d1;
+    
+} 
+
+
+.main-header__responsive-navBar .fa-bars {
+
+    font-size: 2.3rem;
+
+    padding: 1rem;
+
+    color: #ababab;
+    border: 2px solid #d4d2d2;
+    border-radius: 0.8rem;
+}
+
+
+.main-header__wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.main-header__text {
+
+    color: hsl(0, 1%, 56%);
+
+    font-family: "DM Mono", monospace;;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
+}
+
+.main-header__title {
+
+    font-weight: 400;
+    font-size: 4.5rem;
+
+}
+
+.main-header__subtitle {
+    font-style: italic;
+    color: hsl(15, 74%, 41%);
+}
+
+
+.main-header__actions{
+
+    padding: 3rem 3rem;
+}
+
+
+
+.header__button--print {
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgb(201, 200, 200);
+    font-family: inherit;
+    padding: 0.9rem 2.5rem;
+
+    background-color: #f5f3f3;
+
+
+}
+
+
+
+.header__button--calendar {
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgb(67, 67, 67);
+    font-family: inherit;
+    padding: 0.9rem 2.5rem;
+    background-color: #000000;
+    color: #fff;
+}
+
+
+
+
+
+.header__button--print:hover,
+.header__button--calendar:hover {
+    opacity: 0.8;
+}
+
+.header__button--print:active,
+.header__button--calendar:active {
+    outline: 2px solid hsl(15, 74%, 41%);
+
+}
+
+/* HERO START IS HERE */
+
+
+.hero {
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 50rem);
+    justify-content: center;
+    align-items: start;
+
+    margin-bottom: 8rem;
+
+    gap: 1rem;
+
+}
+
+
+/* RECEIPT CARD START IS HERE  */
+
+.receipt-card {
+    display: grid;
+
+    grid-template-rows: repeat(4, auto);
+    border-radius: 3rem;
+
+    min-height: 45rem;
+
+
+    background-color: rgb(251, 250, 250);
+
+    transform: rotate(-4deg);
+    transition: transform .8s ease-in-out;
+
+}
+
+
+
+.receipt-card__header {
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem;
+
+
+}
+
+
+.receipt-text,
+.receipt-text-date,
+.receipt-text-no {
+
+    color: rgb(147, 141, 141);
+    font-weight: 100;
+    font-size: 1.3rem;
+
+}
+
+.receipt-text-date,
+.receipt-text-no {
+    text-align: right;
+}
+
+
+.receipt-text-info {
+
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+
+
+.receipt-card__stayInfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    gap: 7rem;
+
+
+
+}
+
+
+.receipt-text-checkIn,
+.receipt-text-checkOut,
+.receipt-text-day {
+
+    text-align: center;
+
+    font-size: 1.3rem;
+
+    color: rgb(147, 141, 141);
+    word-spacing: 0.3rem;
+
+
+
+
+}
+
+.receipt-text-month {
+
+    font-size: 4rem;
+}
+
+
+.receipt-card__priceList {
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2rem;
+
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+
+.receipt-card__footer {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.receipt-card-paid,
+.receipt-barcode-text {
+
+    color: rgb(147, 141, 141);
+
+
+    padding: 1rem;
+
+    font-size: 1.2rem;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
+}
+
+
+.receipt-text-totalPrice {
+
+    font-size: 2.8rem;
+    font-weight: 600;
+
+    padding: 1rem;
+}
+
+
+
+.receipt-card__header,
+.receipt-card__stayInfo,
+.receipt-card__priceList {
+    position: relative;
+}
+
+.receipt-card__header::after,
+.receipt-card__stayInfo::after,
+.receipt-card__priceList::after {
+    content: "";
+    position: absolute;
+
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+
+    height: 1px;
+    background: #ddd;
+}
+
+
+.receipt-card__priceList::after {
+
+    height: 3px;
+}
+
+
+
+/* SUN HOVER EFFECT */
+
+
+
+
+.hero__sun-image {
+
+    position: absolute;
+    width: 18rem;
+    top: 30%;
+    left: 50%;
+    transform: translateX(38%);
+
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+
+
+}
+
+
+
+/* WELCOME CARD START HERE */
+
+
+
+.welcome-card {
+
+    position: relative;
+
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+
+    min-height: 45rem;
+
+    align-items: center;
+
+    padding: 3rem;
+    border-radius: 3rem;
+
+    color: #fff;
+    background: linear-gradient(to left top,
+            hsl(22, 72%, 56%),
+            hsl(18, 62%, 47%),
+            hsl(15, 74%, 41%),
+            hsl(15, 69%, 37%));
+
+
+    transform: rotate(4deg);
+    transition: transform .8s ease-in-out;
+
+
+}
+
+.welcome-card__header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+
+    border-top: 1px dashed rgba(255, 255, 255, .25);
+
+}
+
+.welcome-card__header {
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.welcome-card__header-image {
+
+    width: 15%;
+}
+
+
+
+.welcome-card__content {
+
+    padding-left: 3rem;
+}
+
+
+.welcome-card__content-title,
+.welcome-card__content-subtitle,
+.welcome-card__content-caption {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+
+.welcome-card__content-title {
+
+    color: rgb(237, 237, 237);
+
+    font-style: italic;
+    font-size: 2.2rem;
+}
+
+
+.welcome-card__content-subtitle {
+    font-style: italic;
+    font-size: 4rem;
+}
+
+
+.welcome-card__content-caption {
+    font-size: 1.4rem;
+}
+
+
+.welcome-card__footer {
+
+
+    display: flex;
+    flex-direction: column;
+
+
+    padding-inline: 3rem;
+
+
+}
+
+
+.welcome-card__footer-title {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+.welcome-card__footer-subtitle {
+    font-size: 2rem;
+}
+
+
+
+.hero__hover-text {
+
+    position: absolute;
+    bottom: 0;
+
+    bottom: 29rem;
+    left: 50%;
+
+    transform: translateX(50%);
+    word-spacing: 0.3rem;
+
+
+}
+
+
+
+
+/* HOVER EFFECT START IS HERE  */
+
+
+.page:has(.hero__hover-text:hover) .receipt-card {
+    transform: translateX(-20%) rotate(5deg);
+}
+
+.page:has(.hero__hover-text:hover) .welcome-card {
+    transform: translateX(20%) rotate(-5deg);
+
+}
+
+.page:has(.hero__hover-text:hover) .hero__sun-image,
+.hero__sun-image img {
+    opacity: 1;
+
+}
+
+
+
+
+/* ======================= 
+    INFO CARDS.
+   =======================  */
+
+.info-cards {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3rem;
+
+    margin-inline: 5rem;
+
+}
+
+
+.arrival-card,
+.wifi-card,
+.breakfast-card {
+
+    background-color: rgb(251, 250, 250);
+    padding: 1rem;
+
+    border: 1px solid #d4d2d2;
+    border-radius: 2rem;
+}
+
+
+/* ARRIVAL CARD START IS HERE */
+
+
+.arrival-card {
+
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+
+}
+
+
+
+.arrival-card__header {
+
+    display: flex;
+    justify-content: space-between;
+
+    color: hsl(15, 74%, 41%);
+
+
+}
+
+
+.arrival-card__icon {
+
+    background-color: hsl(15, 74%, 41%);
+    width: 4rem;
+    height: 4rem;
+    padding: 0.9rem;
+    margin-right: 0.2rem;
+
+
+    border-radius: 25%;
+}
+
+
+
+.arrival-card__title {
+    align-self: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+    display: inline;
+    letter-spacing: 0.1rem;
+}
+
+.arrival-card__number {
+
+    font-size: 2.8rem;
+}
+
+
+.arrival-card__text {
+
+    font-size: 2.7rem;
+    margin-top: 1.2rem;
+}
+
+.arrival-card__date {
+
+    font-size: 1.4rem;
+    color: #706e6e;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* WIFI CARD START IS HERE */
+
+
+.wifi-card {
+
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+
+
+.wifi-card__header {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.wifi-card__header-top {
+
+    color: hsl(230, 49%, 56%);
+}
+
+.wifi-card__icon {
+
+    background-color: hsl(230, 49%, 56%);
+    width: 4rem;
+    height: 4rem;
+    padding: 0.9rem;
+    margin-right: 0.2rem;
+
+
+    border-radius: 25%;
+
+}
+
+.wifi-card__title {
+    align-self: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+    display: inline;
+    letter-spacing: 0.1rem;
+}
+
+
+
+.wifi-card__number {
+    color: hsl(230, 49%, 56%);
+    font-size: 2.8rem;
+}
+
+.wifi-card__text {
+
+    font-size: 2.7rem;
+    margin-top: 1.2rem;
+}
+
+.wifi-card__date {
+
+    font-size: 1.4rem;
+    color: #706e6e;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.wifi-card__foter {
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+
+.wifi-card__footer-networkName,
+.wifi-card__footer-password {
+
+    width: 95%;
+
+    margin: 0.7rem;
+    padding: 1rem;
+
+    background-color: #ece9e9;
+
+    border-radius: 1rem;
+}
+
+
+.wifi-card__footer-networkName {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.wifi-card__footer-password {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.wifi-card__footer .wifi-card__footer-networkLable:nth-child(1) {
+
+    color: rgb(127, 124, 124);
+    letter-spacing: 0.2rem;
+}
+
+
+
+.wifi-card__footer-password a {
+    margin: 0.4rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #bdaeae;
+    border-radius: 1rem;
+    color: grey;
+}
+
+
+/* BREAKFAST CARD START IS HERE */
+
+
+.breakfast-card {
+
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+
+
+.breakfast-card__header {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.breakfast-card__top {
+
+    color: hsl(340, 48%, 52%);
+
+}
+
+.breakfast-card__icon {
+
+    background-color: hsl(340, 48%, 52%);
+
+    width: 4rem;
+    height: 4rem;
+    padding: 0.9rem;
+    margin-right: 0.2rem;
+
+
+    border-radius: 25%;
+
+}
+
+.breakfast-card__title {
+    align-self: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+    display: inline;
+    letter-spacing: 0.1rem;
+}
+
+
+
+.breakfast-card__number {
+    color: hsl(340, 48%, 52%);
+    font-size: 2.8rem;
+}
+
+.breakfast-card__text {
+
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+}
+
+.breakfast-card__location {
+    font-size: 1.4rem;
+    color: #706e6e;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.breakfast-card__caption {
+    margin-top: 3rem;
+    color: #706e6e;
+    font-weight: 900;
+
+
+
+}
+
+
+
+
+/* ======================= 
+    RESPONSIVE CSS.
+   =======================  */
+
+
+@media (max-width: 1200px) {
+
+    .hero {
+
+
+        display: grid;
+        grid-template-columns: repeat(1, 50rem);
+        justify-content: center;
+        align-items: start;
+        margin-top: 12rem;
+        margin-bottom: 8rem;
+
+        gap: 3rem;
+
+    }
+
+    .receipt-card {
+        transform: rotate(-1deg);
+        grid-row: 2;
+    }
+
+    .welcome-card {
+        transform: rotate(1deg);
+        grid-row: 1;
+    }
+
+    .hero__hover-text {
+        display: none;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .main-header__responsive-navBar {
+        display: flex;
+          width:100%;
+        
+
+    }
+
+    .page {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        background-color: #f1ede9;
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        transform: translateX(-120%);
+        z-index: 2;
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+    }
+
+    .sidebar--close{
+
+        transform: translateX(-120% );
+    }
+
+    .sidebar__logo-image{
+        width: 12rem;
+    }
+
+
+    .sidebar--close-btn{
+        display: block;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header__wrapper {
+
+        display: flex;
+        flex-direction: column;
+
+        
+        width: auto;
+    }
+
+
+
+
+
+
+
+}
+
+@media (max-width: 576px) {
+
+    .hero {
+
+        margin-inline: 3rem;
+        grid-template-columns: repeat(1, auto);
+
+
+    }
+
+        .main-header__content{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+       
+    }
+
+    .main-header__actions{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    .header__button--print {
+        font-size: 2rem;
+        padding: 1.3rem 2.5rem;
+
+
+}
+
+
+
+    .header__button--calendar {
+        font-size: 2rem;
+        padding: 1.3rem 2.5rem;
+
+    }
+
+}
+
+@media (max-width: 375px) {
+    .hero {
+        margin-right: 10rem;
+        grid-template-columns: repeat(1, auto);
+
+
+    }
+
+    .receipt-card {
+        transform: rotate(0deg);
+        grid-row: 2;
+    }
+
+    .welcome-card {
+        transform: rotate(0deg);
+        grid-row: 1;
+    }
+}
