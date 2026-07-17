@@ -167,7 +167,7 @@ p {
  ======================================== */
 
 
- /* Hero section start */
+/* Hero section start */
 
 
 .hero,
@@ -227,10 +227,10 @@ p {
 /* Snippets section start */
 
 
-.snippets{
+.snippets {
 
     display: grid;
-    
+
     padding-bottom: 8rem;
 
     gap: 8rem;
@@ -238,37 +238,37 @@ p {
 }
 
 
-.snippets__header{
+.snippets__header {
 
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     text-align: center;
-    
+
 }
 
 
-.snippets__description{
+.snippets__description {
 
     max-width: 70rem;
 }
 
 
 
-.snippets__content{
+.snippets__content {
 
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    
+
 
 }
 
 
 
-.snippets__features{
+.snippets__features {
 
-     max-width: 40rem;
+    max-width: 40rem;
 }
 
 
@@ -276,11 +276,11 @@ p {
 /* Access section start */
 
 
-.access{
+.access {
 
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     text-align: center;
 
@@ -288,13 +288,13 @@ p {
 }
 
 
-.access__title{
+.access__title {
 
     font-size: 4rem;
 }
 
 
-.access__description{
+.access__description {
 
     max-width: 70rem;
 }
@@ -303,7 +303,7 @@ p {
 
 /* Workflow section start */
 
-.workflow{
+.workflow {
 
     display: flex;
     flex-direction: column;
@@ -318,22 +318,22 @@ p {
 }
 
 
-.workflow__title{
+.workflow__title {
 
     font-size: 4rem;
 }
 
-.workflow__card-description{
+.workflow__card-description {
 
     max-width: 40rem;
     margin: 0;
 }
 
 
-.workflow__cards{
+.workflow__cards {
 
     display: flex;
-   
+
     justify-content: center;
     text-align: center;
 
@@ -349,10 +349,22 @@ p {
 }
 
 
-.workflow__card-title{
+.workflow__card-title {
 
     font-size: 2.5rem;
 }
 
 
+/* Brands section start */
 
+.brands {
+    padding-block: 8rem;
+}
+
+
+.brands__list {
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
