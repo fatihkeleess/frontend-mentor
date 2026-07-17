@@ -231,6 +231,8 @@ p {
 
     display: grid;
     
+    padding-bottom: 8rem;
+
     gap: 8rem;
 
 }
@@ -282,7 +284,6 @@ p {
     align-items: center;
     text-align: center;
 
-    padding-block: 8rem;
     gap: 8rem;
 }
 
@@ -297,3 +298,61 @@ p {
 
     max-width: 70rem;
 }
+
+
+
+/* Workflow section start */
+
+.workflow{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    padding-block: 8rem;
+    gap: 8rem;
+
+
+}
+
+
+.workflow__title{
+
+    font-size: 4rem;
+}
+
+.workflow__card-description{
+
+    max-width: 40rem;
+    margin: 0;
+}
+
+
+.workflow__cards{
+
+    display: flex;
+   
+    justify-content: center;
+    text-align: center;
+
+    gap: 3rem;
+    padding-inline: 8rem;
+}
+
+
+.workflow__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.workflow__card-title{
+
+    font-size: 2.5rem;
+}
+
+
+
