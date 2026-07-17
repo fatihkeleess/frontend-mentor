@@ -132,7 +132,7 @@ p {
 /* Buttons */
 
 
-.hero__button {
+.button {
 
     color: #fff;
 
@@ -143,7 +143,7 @@ p {
 }
 
 
-.hero__button--ios {
+.button--ios {
 
     background-color: var(--clr-primary);
 
@@ -151,7 +151,7 @@ p {
 
 }
 
-.hero__button--mac {
+.button--mac {
 
     background-color: var(--clr-secondary);
 
@@ -367,4 +367,31 @@ p {
     display: flex;
     justify-content: space-evenly;
 
+}
+
+
+/* Cta section start */
+
+
+.cta {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    gap: 3rem;
+}
+
+
+.cta__title {
+
+    font-size: 4rem;
+}
+
+
+.cta__description {
+
+    max-width: 70rem;
 }
