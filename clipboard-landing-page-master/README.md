@@ -13,7 +13,7 @@ This is my solution to the Clipboard Landing Page challenge on Frontend Mentor. 
 
 ## 🔗 Links
 
-- Live Site: https://fm-clipboard-landing.netlify.app/
+- Live Site: https://fm-clipboard-landing-page-master.netlify.app/
 - Repository: https://github.com/elzorrodev/frontend-mentor/tree/main/clipboard-landing-page-master
 
 ## 🛠️ Built With
